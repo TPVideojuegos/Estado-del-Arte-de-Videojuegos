@@ -1,0 +1,18 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CambiarPuntuacion : MonoBehaviour {
+
+ public Text Puntuacion ;
+ 
+ void start() {
+ 
+ Puntuacion.text = GameController.Puntuacion2.ToString();
+  }
+ 
+ void update() {
+ 
+   }
+   
+}
+
