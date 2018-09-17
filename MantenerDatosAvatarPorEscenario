@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class MantenerPuntuaciondelAvatar : MonoBehaviour
 {
     private static bool created = false;
+    
+    public  int Puntuacion=10;
+    public static int Puntuacion2=0;
 
     void Awake()
     {
