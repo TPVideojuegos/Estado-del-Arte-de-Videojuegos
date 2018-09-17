@@ -6,12 +6,20 @@ public class ClipControl : MonoBehaviour {
 
     static string nombreObjeto;
     public GameObject objetoTexto;
+    public GameObject textoPos;
+    public GameObject chispas;
+
+
+    
     public void OnMouseDown()
     {
         nombreObjeto = gameObject.name;
         Debug.Log(nombreObjeto);
         Destroy(gameObject);
         Destroy(objetoTexto);
+
+        
+        Instantiate(chispas,textoPos.transform.position,textoPos.transform.rotation);
     }
     // Use this for initialization
     void Start () {
