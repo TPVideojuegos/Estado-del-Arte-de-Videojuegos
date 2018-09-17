@@ -1,0 +1,25 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MantenerPuntuaciondelAvatar : MonoBehaviour
+{
+    private static bool created = false;
+
+    void Awake()
+    {
+        if (!created)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            created = true;
+            Debug.Log("Awake: " + this.gameObject);
+        }
+    }
+
+    public void LoadScene()
+    {
+        if (SceneManager.GetActiveScene().name == "scene1")
+        {
+            SceneManager.LoadScene("a", LoadSceneMode.Single);
+        }
+    }
+}
