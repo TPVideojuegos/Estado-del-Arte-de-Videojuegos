@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
+
+public class intro : MonoBehaviour {
+
+    [SerializeField]//poder cambiar la opcion
+    private VideoPlayer video;
+    float DuracDeVideo  =20f;
+    float TiempoTranscurrido;
+    KeyCode SaltarVideo=KeyCode.Escape ;
+    string SelectChar;
+    
+
+    // Use this for initialization
+    void Start () {
+        video = GetComponent<VideoPlayer>();
+
+     
+
+    }
+	
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetKeyDown(SaltarVideo))
+        {
+
+           SceneManager.LoadScene("SelectChar");
+        }
+
+        TiempoTranscurrido += Time.deltaTime;
+        if (TiempoTranscurrido > DuracDeVideo)
+        {
+            SceneManager.LoadScene("SelectChar");
+        }
+    }
+}
+ 
