@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Seleccionar : MonoBehaviour {
+    public Animator anim;
+    
+    
+    
+    // Use this for initialization
+  
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            anim.SetBool("Seleccionar",true);
+
+        }
+        else
+        {
+            anim.SetBool("Seleccionar", false);
+        }
+
+     
+        
+    }
+
+}
